@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa Greções</title>
+</head>
+<body>
+    <script>
+// função pula linha
+    function pulaLinha() {
+
+    document.write("<br><br>")
+
+}
+
+
+// função que exibe os textos
+
+function mostrar (texto) {
+
+    document.write(texto)
+    pulaLinha()
+
+}
+
+// funcao que realiza os calculos
+
+    var anoAtual = prompt("Digite o ano atual: ");
+    var calcgeracao = Math.round((anoAtual - 1500) / 28);
+    
+
+
+// saída 
+
+
+
+mostrar(`Ao todo já se passaram ${calcgeracao} de gerações de Brasileiros.`)
+
+
+
+
+    </script>
+</body>
+</html>
