@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diferença de Idades</title>
+    <script>
+        // função pula linha
+        function pulaLinha() {
+
+            document.write("<br><br>")
+
+        }
+
+
+        // função da diferença de idades
+
+       function mostrar (texto) {
+        
+        document.write(texto)
+        pulaLinha()
+
+       }
+
+      
+       // entrada dos valores 
+
+       var filho1 = prompt("Idade do filho mais Velho?");
+
+       var filho2 = prompt("Idade do filho mais novo?");
+
+       var diferenca = filho1 - filho2;
+
+
+       // saida dos valores 
+
+       mostrar(`O filho mais velho tem ${filho1} anos.`)
+       mostrar(`O filho mais novo tem ${filho2} anos.`)
+       mostrar(`A diferença de Idade é de ${diferenca} anos de idade.`);
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
