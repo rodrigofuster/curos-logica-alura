@@ -15,31 +15,22 @@
 
 }
 
-
 // função que exibe os textos
-
 function mostrar (texto) {
 
-    document.write(texto)
+    document.write("<big>" + texto + "</big>")
     pulaLinha()
 
 }
 
-// funcao que realiza os calculos
+//realizar os calculos
 
     var anoAtual = prompt("Digite o ano atual: ");
     var calcgeracao = Math.round((anoAtual - 1500) / 28);
     
-
-
 // saída 
 
-
-
 mostrar(`Ao todo já se passaram ${calcgeracao} de gerações de Brasileiros.`)
-
-
-
 
     </script>
 </body>
