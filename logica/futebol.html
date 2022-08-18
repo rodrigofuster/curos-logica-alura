@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futebol</title>
+</head>
+<body>
+    <script>
+        // função pula linha
+    function pulaLinha() {
+
+document.write("<br><br>");
+
+}
+
+// função que exibe os textos
+function mostrar (texto) {
+
+document.write("<big>" + texto + "</big>");
+pulaLinha();
+
+}
+
+var vitorias = parseInt(prompt("Qual o número de vitórias?"));
+var empates = parseInt(prompt("Qual o número de empates?"));
+
+var pontos = (vitorias * 3) + empates;
+
+mostrar("Seu time tem : " + pontos + " pontos.")
+
+    </script>
+</body>
+</html>
