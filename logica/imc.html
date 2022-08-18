@@ -11,32 +11,37 @@
         // função pula linha
     function pulaLinha() {
 
-document.write("<br><br>")
+document.write("<br><br>");
 
 }
 
 // função que exibe os textos
 function mostrar (texto) {
 
-document.write("<big>" + texto + "</big>")
-pulaLinha()
+document.write("<big>" + texto + "</big>");
+pulaLinha();
 
 }
 
 //função do imc 
 function calculaImc(peso , altura) {
-    var imc = peso / (altura * altura)
-    mostrar(`O imc é de ${imc}`)
+    var imc = peso / (altura * altura);
+    return imc;
 
 }
 
 //entrada dos dados 
 
-calculaImc(92 , 1.79)
-calculaImc(106, 1.75)
+calculaImc(92 , 1.79);
+calculaImc(106, 1.75);
 
 
-//resolução do calculo 
+//resolução e saída dos dados 
+var imcPedro = calculaImc(92 , 1.79);
+var imcPaulo = calculaImc(80, 1.82); 
+
+mostrar(`A soma dos imc's é de ${Math.floor(imcPaulo + imcPedro)}.`)
+
 
 
 
