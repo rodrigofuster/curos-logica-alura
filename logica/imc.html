@@ -44,6 +44,17 @@ var imc = (calculaImc(pesoInfo, alturaInfo));
 
 mostrar(`${nome} o seu imc é de ${imc}.`);
 
+if (imc < 18.5) {
+
+    mostrar("Você está abaixo do recomendado.");
+
+} else if (imc > 18.5 || imc <= 35) {
+
+    mostrar("Você está na média.")
+} else {
+    mostrar("Você está acima do recomendado.")
+}
+
 
 
 

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Adivinhação</title>
+</head>
+<body>
+    <script>
+// função pula linha
+function pulaLinha() {
+
+    document.write("<br><br>");
+
+}
+
+// função que exibe os textos
+function mostrar (texto) {
+
+    document.write("<big>" + texto + "</big>");
+    pulaLinha();
+
+}
+
+var numeroEscolhido = Math.round(Math.random() * 10); 
+
+var numeroChute = parseInt(prompt("Escolha um número entre 0 e 10." ));
+
+if (numeroEscolhido === numeroChute) {
+    mostrar("Você acertou! LoL");
+} else {
+    mostrar("Você errou!! o número escolhido era " + numeroEscolhido + ".")
+}
+
+    </script>
+</body>
+</html>
