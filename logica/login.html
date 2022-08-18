@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    
+    <script>
+function pulaLinha() {
+
+    document.write("<br><br>");
+
+}
+
+// função que exibe os textos
+function mostrar (texto) {
+
+    document.write("<big>" + texto + "</big>");
+    pulaLinha();
+
+}
+
+var loginCadastrado = "alura"; 
+var senhaCadastrada = "alura123"; 
+
+var loginInformado = prompt("Informe o seu login:")
+var senhaInformada = prompt("Informe a sua senha:")
+
+
+if (loginCadastrado == loginInformado && senhaCadastrada == senhaInformada) {
+    
+    alert("Bem-vindo ao sistema.")
+    
+} else {
+    var contador = 1; 
+    while ( contador <= 3) {
+
+        if (loginCadastrado == loginInformado && senhaCadastrada == senhaInformada) {
+
+            alert("Bem-vindo ao sistema.")
+            contador = 4
+
+        } else {
+
+            alert("Senha inválida. Tente Novamente.")
+            var tentativa = alert("Tentaiva " + (contador + 1) + "/3.");
+            var loginInformado = prompt("Informe o seu login:");
+            var senhaInformada = prompt("Informe a sua senha:");
+            contador++
+
+        } if (contador > 3) {
+            alert("Número máximo de tentativas. Sair do Sistema...")
+        }
+
+    }
+}
+
+alert("fim")
+
+
+    </script>
+
+</body>
+</html>

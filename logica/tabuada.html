@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=scr, initial-scale=1.0">
+    <title>Tabuada</title>
+</head>
+<body>
+    <script>
+        function pulaLinha() {
+
+document.write("<br><br>");
+
+}
+
+// função que exibe os textos
+function mostrar (texto) {
+
+document.write("<big>" + texto + "</big>");
+pulaLinha();
+
+}
+
+var multiplicador = 1; 
+var multiNumero = parseInt(prompt("Digite o número escolhido: "))
+//var multiNumero = 3;
+
+while (multiplicador <= 10) {
+
+    if (multiNumero == NaN) {
+
+        alert("Número inválido.");
+        var multiNumero = parseInt(prompt("Digite o número escolhido: "));
+        multiplicador = multiplicador + 10;
+
+    } else {
+
+        mostrar(multiNumero + " x " + multiplicador + " = " + (multiplicador * multiNumero) + ".");
+        multiplicador++
+}
+
+}
+
+mostrar('fim')
+
+
+
+
+
+    </script>
+</body>
+</html>
