@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anos de Copa</title>
+    <title>Numeros Pares</title>
 </head>
 <body>
     <script>
@@ -23,17 +23,20 @@ function mostrar (texto) {
 
 }
 
-var anoCopa = 1930;
-var numeroCopa = 1;
+var contador = 0;
 
-while (anoCopa <= 2022) {
-    mostrar("Teve copa no ano de " + anoCopa); 
-    anoCopa = anoCopa + 4; 
-    numeroCopa = numeroCopa + 1;
-
+while (contador <= 100) {
+    mostrar(contador + " é um número par.");
+    contador = contador + 2;
 }
-mostrar("Total de Copas: " + numeroCopa);
-mostrar("Fim");
+
+mostrar('Fim!')
+
+
+
+
+
+
 
     </script>
 </body>

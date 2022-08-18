@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=scr, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function pulaLinha() {
+
+document.write("<br><br>");
+
+}
+
+// função que exibe os textos
+function mostrar (texto) {
+
+document.write("<big>" + texto + "</big>");
+pulaLinha();
+
+}
+
+var contador = 30; 
+
+mostrar("Mostar números entre 30 e 40. Sem mostrar  o 33 e o 37.")
+
+while (contador < 41) {
+    if (contador == 33 || contador == 37) {
+        contador = contador + 1;
+    } else {
+        mostrar(contador);
+    }
+    contador = contador +1;
+}
+
+mostrar('Fim!')
+
+    </script>
+</body>
+</html>
