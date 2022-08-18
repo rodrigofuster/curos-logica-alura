@@ -25,22 +25,24 @@ pulaLinha();
 
 //função que retorna o imc 
 function calculaImc(peso , altura) {
-    var imc = peso / (altura * altura);
-    return imc;
+
+    return peso / (altura * altura);
 
 }
 
 //entrada dos dados 
 
-calculaImc(92 , 1.79);
-calculaImc(106, 1.75);
+var nome = prompt("Qual o seu nome?");
+var alturaInfo = prompt(nome +", qual a sua Altura?");
+var pesoInfo = prompt(nome + ", Informe o seu peso:");
+
+var imc = (calculaImc(pesoInfo, alturaInfo));
 
 
 //resolução e saída dos dados 
-var imcPedro = calculaImc(92 , 1.79);
-var imcPaulo = calculaImc(80, 1.82); 
 
-mostrar(`A soma dos imc's é de ${Math.floor(imcPaulo + imcPedro)}.`)
+
+mostrar(`${nome} o seu imc é de ${imc}.`);
 
 
 
