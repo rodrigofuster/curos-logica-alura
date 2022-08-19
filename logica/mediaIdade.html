@@ -4,45 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogo de Adivinhação</title>
+    <title>Anos de Copa</title>
 </head>
 <body>
     <script>
 // função pula linha
 function pulaLinha() {
-
     document.write("<br><br>");
-
 }
 
 // função que exibe os textos
 function mostrar (texto) {
-
     document.write("<big>" + texto + "</big>");
     pulaLinha();
-
 }
 
-var numeroEscolhido = Math.round(Math.random() * 10); 
+var totalFamiliares = parseInt(prompt("Quantidade de familiares?"));
 
-mostrar(numeroEscolhido);
+var totalIdade = 0 ;
 
-var chances = 1; 
+var numero = 1;
 
-while (chances <= 3) {
+while (numero <= totalFamiliares) {
+    var idade = parseInt(prompt("Informe a idade do familiar: "))
+    totalIdade = totalIdade + idade;
 
-    var numeroChute = parseInt(prompt("Escolha um número entre 0 e 10." ));
-
-    if (numeroEscolhido == numeroChute) {
-        mostrar("Você acertou! LoL");
-        break;
-    } else {
-        alert("Você!! mais ainda tem outras " + (3 - chances) + " tentativas.")
-    }
-    chances++
+    numero++
 }
 
-mostrar('Fim');
+var mediaIdade = totalIdade / totalFamiliares; 
+
+mostrar("A média de idade familiar é de " + mediaIdade + ".");
+
+mostrar("Fim.")
 
 
     </script>
