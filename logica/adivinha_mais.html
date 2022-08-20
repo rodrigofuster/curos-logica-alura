@@ -12,18 +12,24 @@
 
  <script>
 
+//função que sorteia um número aleatório
     function sortear() {
         return Math.round(Math.random * 10); 
        }
+
+//função que cria a lista de de numeros sorteados
+    function sortearNumeros (quantidade) {
+        var segredos = [];
+        for (var i = 1; i <= quantidade; i++ ) {
+            segredos.push(sortear())
+        }
+
+        return segredos;
+    }
+
     
-    var segredos = [];
-    segredos.push(sortear());
-    segredos.push(sortear());
-    segredos.push(sortear());
-    segredos.push(sortear());
-    segredos.push(sortear());
-
-
+    var segredos = sortearNumeros(3);
+    
     var input = document.querySelector("input");
     input.focus()
 
