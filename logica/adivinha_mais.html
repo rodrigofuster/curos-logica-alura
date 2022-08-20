@@ -12,23 +12,46 @@
 
  <script>
 
-    var segredo = Math.round(Math.random() * 10 );
+    function sortear() {
+        return Math.round(Math.random * 10); 
+       }
+    
+    var segredos = [];
+    segredos.push(sortear());
+    segredos.push(sortear());
+    segredos.push(sortear());
+    segredos.push(sortear());
+    segredos.push(sortear());
+
 
     var input = document.querySelector("input");
     input.focus()
 
     function verificar() {
 
-        if( input.value == segredo) {
-    
-            alert("Você acertou!");
-    
-        } else {
+        var achou = false;
+
+        for (var i = 0; i < segredos.length; i++) {
+
+            if( input.value == segredos[i]) {
+        
+                alert("Você acertou!");
+                achou = true;
+                break;
+        
+            } 
+            
+        }
+        
+        if (achou == false) {
     
             alert("Você errou!")
         }
+        
         input.value = "";
         input.focus();
+
+        alert('Fim');
         
     }
 
