@@ -18,20 +18,31 @@
        }
 
 //função que cria a lista de de numeros sorteados
+
     function sortearNumeros (quantidade) {
-        var segredos = [];
-        for (var i = 1; i <= quantidade; i++ ) {
-            segredos.push(sortear())
+        var numeroAleatorio = sortear();
+        var achou = false; 
+
+        for(var posicao = 0; posicao < segredos.length; posicao++ ) {
+            if(segredos[posicao] == numeroAleatorio) {
+                achou = true; 
+                break
+            }
         }
 
-        return segredos;
+        if(achou == false) {
+            segredos.push(numeroAleatorio);
+        }
+        
     }
 
     
+
     var segredos = sortearNumeros(3);
     
     var input = document.querySelector("input");
     input.focus()
+
 
     function verificar() {
 
@@ -45,14 +56,12 @@
                 achou = true;
                 break;
         
-            } 
-            
+            } else if (achou == false) {
+        
+                alert("Você errou!")
+            }
         }
         
-        if (achou == false) {
-    
-            alert("Você errou!")
-        }
         
         input.value = "";
         input.focus();
