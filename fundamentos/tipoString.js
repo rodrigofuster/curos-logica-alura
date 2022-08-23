@@ -18,4 +18,4 @@ const up = texto2.toUpperCase();
 const primeiroNumero = 5; 
 const segundoNumero = 10;
 
-console.log(primeiroNumero != segundoNumero);
+console.log(primeiroNumero === segundoNumero);
